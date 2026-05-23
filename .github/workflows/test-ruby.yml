@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: monkci-ubuntu-24.04-4
 
     strategy:
       fail-fast: true
@@ -75,7 +75,7 @@ jobs:
           retention-days: 0
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: monkci-ubuntu-24.04-4
 
     needs:
       - build
@@ -176,7 +176,7 @@ jobs:
 
   test-e2e:
     name: End to End testing
-    runs-on: ubuntu-latest
+    runs-on: monkci-ubuntu-24.04-4
 
     needs:
       - build
@@ -279,7 +279,7 @@ jobs:
 
   test-search:
     name: Elastic Search integration testing
-    runs-on: ubuntu-latest
+    runs-on: monkci-ubuntu-24.04-4
 
     needs:
       - build
